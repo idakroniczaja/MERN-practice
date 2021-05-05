@@ -15,10 +15,10 @@ function App() {
       </nav>
 
       <Switch>
-      <Route exact path='/new-user' render={(props)=><CreateUser  {...props}/>}/>
-      <Route exact path='/all-users' render={(props)=><Users  {...props}/>}/>
-      <Route exact path='/all-users/:id' render={(props)=><UserDetails  {...props}/>}/>
-      <Route exact path='/all-users/:id' render={(props)=><EditUser  {...props}/>}/>
+        <Route exact path='/all-users' render={(props)=><Users  {...props}/>}/>
+        <Route exact path='/new-user' render={(props)=><CreateUser  {...props}/>}/>
+        <Route exact path='/all-users/:id/edit' render={(props)=><EditUser  {...props}/>}/>
+        <Route exact path='/all-users/:id' render={(props)=><UserDetails  {...props}/>}/>
       </Switch>
 
     </div>

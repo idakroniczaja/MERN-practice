@@ -19,6 +19,7 @@ router.post('/new-user', (req, res, next) => {
 
     User.create({username, password, imageUrl})
     .then(createdUser=>{
+        console.log('-----res.locals',res.locals)
         res.status(200).json(createdUser)
     })
     .catch(err=>{
