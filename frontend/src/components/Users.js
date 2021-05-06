@@ -42,12 +42,12 @@ const showAllUsers = () => {
 
    return  users.map(user=>{
         return (
-            <>
+            <div >
             <Link to={`/all-users/${user._id}`}> <li key={user._id}>{user.username}</li></Link>
            
             <button onClick={()=>deleteUser(user._id)}>delete</button>
            
-            </>
+            </div>
            
         )
     })
@@ -58,7 +58,7 @@ const showAllUsers = () => {
 
 
     return (
-        <div>
+        <div className='all-users'>
         <CreateUser usersDB={allUsersFromDb}/>
 
         {users.length===0 && <h2>No users to show</h2> || <h2>All users</h2>}
