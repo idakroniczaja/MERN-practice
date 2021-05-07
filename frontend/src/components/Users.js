@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React , {useState, useEffect} from 'react';
 import {Link} from 'react-router-dom'
+import './User.css'
 
 import CreateUser from '../components/CreateUser';
  
@@ -42,10 +43,10 @@ const showAllUsers = () => {
 
    return  users.map(user=>{
         return (
-            <div >
-            <Link to={`/all-users/${user._id}`}> <li key={user._id}>{user.username}</li></Link>
+            <div className='each-user'>
+            <Link className='link' to={`/all-users/${user._id}`}> <li key={user._id}>{user.username}</li></Link>
            
-            <button onClick={()=>deleteUser(user._id)}>delete</button>
+            <button onClick={()=>deleteUser(user._id)}>Delete</button>
            
             </div>
            
