@@ -1,5 +1,6 @@
 import React, {isValidElement, useState} from 'react';
-import axios from 'axios'
+import axios from 'axios';
+import './CreateUser.css'
 
 
 export default function CreateUser({usersDB}) {
@@ -47,7 +48,7 @@ const handleSubmit = (e)=>{
 
 
     return (
-        <div>
+        <div className="create-user">
             <h2>Create user</h2>
             <form onSubmit={e=>handleSubmit(e)} >
                 <input type='text' value={username} placeholder='username' onChange={(e)=>setUsername(e.target.value)}/>
